@@ -127,23 +127,12 @@ img {
 }
 
 .hero-title-accent {
-  background: linear-gradient(105deg, #ff8f88 0%, #ffb7b2 48%, #c9b9a5 100%);
+  background: linear-gradient(105deg, #ffffff 0%, #f472b6 34%, #7c8cff 72%, #ffffff 100%);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
   position: relative;
-}
-
-.hero-title-accent::after {
-  position: absolute;
-  left: 0.04em;
-  bottom: -0.08em;
-  font-family: "Reenie Beanie", cursive;
-  font-size: 0.36em;
-  font-weight: 400;
-  letter-spacing: 0;
-  color: rgba(120, 113, 108, 0.48);
-  content: "softly";
+  filter: drop-shadow(0 0 28px rgba(124, 140, 255, 0.42));
 }
 
 .hero-dots {
@@ -224,9 +213,6 @@ img {
     opacity: 0.45;
   }
 
-  .hero-title-accent::after {
-    display: none;
-  }
 }
 
 @media (prefers-reduced-motion: reduce) {

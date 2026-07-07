@@ -1,89 +1,132 @@
+import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { useState } from "react";
-import { journeyContent, type Language } from "../data/content";
+import { homeJourneyContent, homeJourneyDetailsContent, type Language } from "../data/content";
 import MotionSection from "./MotionSection";
-import ParallaxBackground from "./ParallaxBackground";
-import SectionHeader from "./SectionHeader";
 
 export default function CapabilityJourney({ language }: { language: Language }) {
-  const data = journeyContent;
-  const [openIndex, setOpenIndex] = useState<number | null>(null);
+  const overview = homeJourneyContent;
+  const [openIndex, setOpenIndex] = useState<number | null>(0);
+  const reduceMotion = useReducedMotion();
+  const activeOverview = openIndex === null ? null : overview.chapters[openIndex];
+  const activeDetail = openIndex === null ? null : homeJourneyDetailsContent[openIndex];
 
   return (
-    <section id="journey" className="relative overflow-hidden bg-paper px-5 py-24 lg:px-8">
-      <ParallaxBackground variant="journey" />
+    <section id="journey" className="relative overflow-hidden bg-[#050512] px-5 py-24 text-white lg:px-8">
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_12%_8%,rgba(244,114,182,0.22),transparent_34%),radial-gradient(circle_at_88%_24%,rgba(124,140,255,0.2),transparent_32%),linear-gradient(180deg,#050512_0%,#09091a_50%,#050512_100%)]" />
+      <div className="pointer-events-none absolute inset-0 opacity-40 [background-image:linear-gradient(rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.05)_1px,transparent_1px)] [background-size:64px_64px]" />
+
       <div className="relative z-10 mx-auto max-w-7xl">
         <MotionSection>
-          <SectionHeader eyebrow="Capability Journey" title={data.title[language]}>
-            {data.intro[language].map((line) => (
-              <p key={line}>{line}</p>
-            ))}
-          </SectionHeader>
+          <div className="grid gap-8 lg:grid-cols-[0.78fr_1.22fr] lg:items-end">
+            <div>
+              <p className="text-xs font-bold uppercase tracking-[0.22em] text-fuchsia-200/70">{overview.eyebrow[language]}</p>
+              <h2 className="mt-5 max-w-3xl text-5xl font-bold leading-tight tracking-tight text-white md:text-7xl">
+                {overview.title[language]}
+              </h2>
+            </div>
+            <div className="rounded-[2rem] border border-white/10 bg-white/[0.06] p-6 text-lg leading-8 text-white/68 shadow-[0_30px_120px_rgba(0,0,0,0.28)] backdrop-blur-xl">
+              {overview.intro[language].map((line) => (
+                <p key={line} className="mb-3 last:mb-0">
+                  {line}
+                </p>
+              ))}
+            </div>
+          </div>
         </MotionSection>
 
-        <div className="mt-14 grid gap-5">
-          {data.chapters.map((chapter, index) => {
+        <div className="mt-14 grid gap-4 md:grid-cols-5">
+          {overview.chapters.map((chapter, index) => {
             const isOpen = openIndex === index;
             return (
               <MotionSection key={chapter.title.en} delay={index * 0.04}>
-                <article className="overflow-hidden rounded-[2rem] border border-white/80 bg-white/68 shadow-soft backdrop-blur-xl transition hover:-translate-y-1.5 hover:border-green/70 hover:shadow-lift">
-                  <button
-                    type="button"
-                    className="grid w-full gap-6 p-6 text-left lg:grid-cols-[180px_260px_1fr_auto] lg:items-start lg:p-8"
-                    onClick={() => setOpenIndex(isOpen ? null : index)}
-                    aria-expanded={isOpen}
-                  >
-                    <p className="text-xs font-bold uppercase tracking-[0.18em] text-sand">
-                      Chapter {String(index + 1).padStart(2, "0")}
+                <button
+                  type="button"
+                  onClick={() => setOpenIndex(isOpen ? null : index)}
+                  className={`group flex min-h-[270px] w-full flex-col justify-between rounded-[2rem] border p-5 text-left transition ${
+                    isOpen
+                      ? "border-fuchsia-300/60 bg-white/[0.13] shadow-[0_24px_90px_rgba(124,140,255,0.22)]"
+                      : "border-white/10 bg-white/[0.055] hover:-translate-y-2 hover:border-indigo-200/40 hover:bg-white/[0.1]"
+                  }`}
+                  aria-expanded={isOpen}
+                >
+                  <div>
+                    <p className="text-xs font-bold uppercase tracking-[0.18em] text-fuchsia-200/62">
+                      {String(index + 1).padStart(2, "0")}
                     </p>
-                    <div className="rounded-[1.5rem] bg-sage/65 p-5">
-                      <p className="text-sm font-semibold leading-6 text-muted">{chapter.shift.from[language]}</p>
-                      <p className="my-2 text-2xl leading-none text-green">→</p>
-                      <p className="text-xl font-semibold leading-7 text-ink">{chapter.shift.to[language]}</p>
+                    <h3 className="mt-5 text-xl font-bold leading-tight tracking-tight text-white">{chapter.title[language]}</h3>
+                    <p className="mt-4 text-sm leading-6 text-white/58">{chapter.summary[language]}</p>
+                  </div>
+                  <div className="mt-6">
+                    <div className="mb-3 flex flex-wrap gap-2">
+                      {chapter.tags[language].slice(0, 3).map((tag) => (
+                        <span key={tag} className="rounded-full border border-white/10 bg-black/20 px-3 py-1.5 text-xs text-white/72">
+                          {tag}
+                        </span>
+                      ))}
+                      {chapter.tags[language].length > 3 ? (
+                        <span className="rounded-full border border-fuchsia-200/20 bg-fuchsia-300/10 px-3 py-1.5 text-xs text-fuchsia-100">
+                          +{chapter.tags[language].length - 3}
+                        </span>
+                      ) : null}
                     </div>
-                    <div>
-                      <h3 className="text-3xl font-bold leading-tight tracking-tight text-ink">{chapter.title[language]}</h3>
-                      <p className="mt-3 max-w-3xl text-lg leading-8 text-muted">{chapter.summary[language]}</p>
-                      <div className="mt-5 flex flex-wrap gap-2">
-                        {chapter.capabilities.map((capability) => (
-                          <span
-                            key={capability.en}
-                            className="rounded-full border border-line bg-paper/80 px-3 py-2 text-sm text-ink shadow-soft"
-                          >
-                            {capability[language]}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-                    <span className="h-fit rounded-full bg-ink px-4 py-2 text-center text-sm font-bold text-paper shadow-soft transition hover:-translate-y-0.5 hover:bg-green">
-                      {isOpen ? data.labels.close[language] : data.labels.readMore[language]}
+                    <span className="text-sm font-bold text-fuchsia-100">
+                      {isOpen ? overview.labels.close[language] : overview.labels.readMore[language]}
                     </span>
-                  </button>
-
-                  {isOpen ? (
-                    <div className="border-t border-line bg-paper/68 px-6 pb-7 pt-6 md:px-8">
-                      <div className="grid gap-6 lg:grid-cols-3">
-                        <DetailBlock title={data.labels.why[language]} body={chapter.detail.why[language]} />
-                        <DetailBlock title={data.labels.observed[language]} body={chapter.detail.observed[language]} />
-                        <DetailBlock title={data.labels.decision[language]} body={chapter.detail.decision[language]} />
-                      </div>
-                      <div className="mt-8">
-                        <p className="text-xs font-bold uppercase tracking-[0.18em] text-green">{data.labels.built[language]}</p>
-                        <div className="mt-4 grid gap-3 md:grid-cols-2">
-                          {chapter.detail.built.map((capability) => (
-                            <div key={capability.title.en} className="rounded-[1.5rem] border border-line bg-white/78 p-4 shadow-soft">
-                              <h4 className="font-semibold text-ink">{capability.title[language]}</h4>
-                              <p className="mt-2 text-sm leading-6 text-muted">{capability.text[language]}</p>
-                            </div>
-                          ))}
-                        </div>
-                      </div>
-                    </div>
-                  ) : null}
-                </article>
+                  </div>
+                </button>
               </MotionSection>
             );
           })}
         </div>
+
+        <AnimatePresence mode="wait">
+          {activeOverview && activeDetail ? (
+            <motion.div
+              key={activeOverview.title.en}
+              initial={reduceMotion ? false : { opacity: 0, y: 26, filter: "blur(10px)" }}
+              animate={reduceMotion ? undefined : { opacity: 1, y: 0, filter: "blur(0px)" }}
+              exit={reduceMotion ? undefined : { opacity: 0, y: -18, filter: "blur(8px)" }}
+              transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
+              className="mt-8 overflow-hidden rounded-[2.5rem] border border-white/12 bg-white/[0.08] shadow-[0_30px_120px_rgba(0,0,0,0.34)] backdrop-blur-2xl"
+            >
+              <div className="grid gap-0 lg:grid-cols-[0.72fr_1.28fr]">
+                <div className="border-b border-white/10 p-7 lg:border-b-0 lg:border-r lg:p-9">
+                  <p className="text-xs font-bold uppercase tracking-[0.22em] text-fuchsia-200/70">
+                    {overview.labels.selected[language]}
+                  </p>
+                  <h3 className="mt-5 text-4xl font-bold leading-tight tracking-tight text-white">{activeOverview.title[language]}</h3>
+                  <p className="mt-5 text-lg leading-8 text-white/64">{activeOverview.summary[language]}</p>
+                  <div className="mt-6 flex flex-wrap gap-2">
+                    {activeOverview.tags[language].map((tag) => (
+                      <span key={tag} className="rounded-full border border-indigo-200/20 bg-indigo-300/10 px-3 py-2 text-sm text-white/76">
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="p-7 lg:p-9">
+                  <div className="grid gap-5 xl:grid-cols-3">
+                    <DetailBlock title={overview.labels.why[language]} body={activeDetail.why[language]} />
+                    <DetailBlock title={overview.labels.observed[language]} body={activeDetail.observed[language]} />
+                    <DetailBlock title={overview.labels.decision[language]} body={activeDetail.decision[language]} />
+                  </div>
+                  <div className="mt-7">
+                    <p className="text-xs font-bold uppercase tracking-[0.18em] text-fuchsia-200/70">{overview.labels.built[language]}</p>
+                    <div className="mt-4 grid gap-3 md:grid-cols-2">
+                      {activeDetail.built.map((capability) => (
+                        <div key={capability.title.en} className="rounded-[1.5rem] border border-white/10 bg-black/20 p-4">
+                          <h4 className="font-semibold text-white">{capability.title[language]}</h4>
+                          <p className="mt-2 text-sm leading-6 text-white/62">{capability.text[language]}</p>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          ) : null}
+        </AnimatePresence>
       </div>
     </section>
   );
@@ -91,9 +134,9 @@ export default function CapabilityJourney({ language }: { language: Language }) 
 
 function DetailBlock({ title, body }: { title: string; body: readonly string[] }) {
   return (
-    <div className="rounded-[1.5rem] bg-white/62 p-5 shadow-soft">
-      <p className="text-xs font-bold uppercase tracking-[0.18em] text-green">{title}</p>
-      <div className="mt-3 space-y-3 text-sm leading-7 text-muted">
+    <div className="rounded-[1.5rem] border border-white/10 bg-black/20 p-5">
+      <p className="text-xs font-bold uppercase tracking-[0.18em] text-fuchsia-200/70">{title}</p>
+      <div className="mt-3 space-y-3 text-sm leading-7 text-white/62">
         {body.map((paragraph) => (
           <p key={paragraph}>{paragraph}</p>
         ))}

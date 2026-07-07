@@ -7,18 +7,22 @@ import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
 import NextValueSection from "./components/NextValueSection";
 import SelectedCases from "./components/SelectedCases";
+import SideNav from "./components/SideNav";
 import WorkingPrinciples from "./components/WorkingPrinciples";
 import type { Language } from "./data/content";
 
 function HomePage({ language }: { language: Language }) {
   return (
-    <main>
-      <Hero language={language} />
-      <CapabilityJourney language={language} />
-      <SelectedCases language={language} />
-      <NextValueSection language={language} />
-      <WorkingPrinciples language={language} />
-    </main>
+    <>
+      <SideNav language={language} />
+      <main>
+        <Hero language={language} />
+        <CapabilityJourney language={language} />
+        <SelectedCases language={language} />
+        <NextValueSection language={language} />
+        <WorkingPrinciples language={language} />
+      </main>
+    </>
   );
 }
 
@@ -40,7 +44,7 @@ export default function App() {
         <Route path="/" element={<HomePage language={language} />} />
         <Route path="/case/:caseId" element={<CaseDetail language={language} />} />
       </Routes>
-      <Footer language={language} />
+      <Footer />
     </BrowserRouter>
   );
 }

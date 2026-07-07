@@ -1154,3 +1154,491 @@ export const caseDetails = [
     ],
   },
 ] as const;
+
+export const homeHeroContent = {
+  titleLines: {
+    en: ["Turning Change", "into Long-Term Value"],
+    zh: ["将变化", "转化为长期价值"],
+  },
+  accent: { en: "Change", zh: "变化" },
+  subtitle: {
+    en: "I help businesses navigate changing markets, identify growth opportunities, and turn strategy into execution.",
+    zh: "我关注市场、消费者和技术的变化，从中识别新的商业机会，并通过实际行动创造长期价值。",
+  },
+  advantage: {
+    en: "I build business judgment in change and uncertainty, identify meaningful opportunities, and turn new possibilities into business value through learning, experimentation, and execution.",
+    zh: "我在变化与不确定性中建立商业判断，识别关键机会，并通过学习、实验与执行，将新的可能性转化为实际商业价值。",
+  },
+  logic: {
+    en: "Understand Change → Build Judgment → Validate Opportunities → Drive Execution → Create Value",
+    zh: "理解变化 → 形成判断 → 验证机会 → 推动执行 → 创造价值",
+  },
+  capabilityPath: {
+    en: ["Understand Change", "Build Judgment", "Validate Opportunities", "Drive Execution", "Create Value"],
+    zh: ["理解变化", "形成判断", "验证机会", "推动执行", "创造价值"],
+  },
+  positioning: {
+    en: "Strategy × Global Business × Technology",
+    zh: "战略 × 全球商业 × 技术",
+  },
+  locations: {
+    en: ["China", "France", "Finland", "Middle East"],
+    zh: ["中国", "法国", "芬兰", "中东"],
+  },
+  locationLabel: {
+    en: "Global Experience",
+    zh: "全球经历",
+  },
+  proofTitle: {
+    en: "Built Through Real Transitions",
+    zh: "能力来自真实转变",
+  },
+  transitions: {
+    en: [
+      "Engineering → Business",
+      "Government → Entrepreneurship",
+      "China → Global Markets",
+      "Business Practice → AI-Enabled Workflows",
+    ],
+    zh: ["工科 → 商业", "政府 → 创业", "中国市场 → 全球市场", "商业实践 → AI赋能"],
+  },
+} as const;
+
+export const homeJourneyContent = {
+  title: { en: "How Change Built My Capabilities", zh: "转变如何塑造了我的能力" },
+  eyebrow: { en: "Capability Journey", zh: "能力形成路径" },
+  intro: {
+    en: [
+      "My career has not followed a predetermined path.",
+      "Each transition began with a change I observed, a limitation I recognized, or a question I wanted to answer.",
+      "Each time, I moved toward a new environment where I could build the capabilities needed for the next challenge.",
+    ],
+    zh: [
+      "我的职业经历并没有沿着一条预先设定好的路线发展。",
+      "每一次转变，都来自一个我观察到的变化、意识到的能力局限，或者希望回答的问题。",
+      "而每一次进入新的环境，我都试图建立应对下一阶段挑战所需要的能力。",
+    ],
+  },
+  labels: {
+    readMore: { en: "Read More", zh: "查看详情" },
+    close: { en: "Close", zh: "收起详情" },
+    selected: { en: "Selected Change", zh: "当前转变" },
+    why: { en: "Why I Changed", zh: "为什么改变" },
+    observed: { en: "Change I Observed", zh: "我观察到的变化" },
+    decision: { en: "Decision I Made", zh: "我做出的决定" },
+    built: { en: "Capabilities Built", zh: "获得的能力" },
+  },
+  chapters: [
+    {
+      title: { en: "From Engineering to Business", zh: "从工科转向商业" },
+      summary: {
+        en: "A real business sponsorship experience helped me identify where my strengths truly were.",
+        zh: "一次真实商务实践让我开始确认自己真正擅长的是理解需求、连接资源并创造商业价值。",
+      },
+      tags: {
+        en: ["Opportunity Recognition", "Learning Agility", "Business Communication", "International Perspective"],
+        zh: ["机会识别", "快速学习", "商务沟通", "国际视野"],
+      },
+    },
+    {
+      title: { en: "From Campus to Government", zh: "从校园走向政府" },
+      summary: {
+        en: "I entered a complex public-sector environment to learn how ideas become real outcomes through coordination and execution.",
+        zh: "我进入真实复杂的公共部门环境，学习如何通过协调资源和持续执行把想法转化为结果。",
+      },
+      tags: {
+        en: ["Stakeholder Management", "Strategic Communication", "Complex Execution", "Resource Coordination", "Business Development"],
+        zh: ["利益相关者管理", "战略沟通", "复杂项目执行", "资源协调", "商务拓展"],
+      },
+    },
+    {
+      title: { en: "From a Stable Career to Entrepreneurship", zh: "从稳定职业走向创业" },
+      summary: {
+        en: "I moved from structured work into direct market experimentation and built a business system from zero.",
+        zh: "我从稳定职业进入直接市场实验，并从0建立了一套业务系统。",
+      },
+      tags: {
+        en: ["Zero-to-One Validation", "Customer Insight", "Content-Led Growth", "Service Design", "Referral Growth"],
+        zh: ["从0到1验证", "客户洞察", "内容驱动增长", "服务设计", "转介绍增长"],
+      },
+    },
+    {
+      title: { en: "From China to Global Markets", zh: "从中国市场走向全球市场" },
+      summary: {
+        en: "Entering unfamiliar markets pushed me to compare platforms, customers, suppliers, and local constraints.",
+        zh: "进入陌生市场让我开始比较平台、客户、供应链和本地约束，建立可迁移的市场判断能力。",
+      },
+      tags: {
+        en: ["Global Market Analysis", "International Market Entry", "Cross-Border Operations", "Supplier Management", "Market Adaptability"],
+        zh: ["全球市场分析", "国际市场进入", "跨境业务运营", "供应商管理", "市场适应能力"],
+      },
+    },
+    {
+      title: { en: "From Global Business to a Technology-Driven Future", zh: "从全球商业走向技术驱动的未来" },
+      summary: {
+        en: "AI and new workflows changed how I think about strategy, execution, and organizational capability.",
+        zh: "AI和新工作流改变了我对战略、执行和组织能力的理解，也推动我面向未来持续学习。",
+      },
+      tags: {
+        en: ["AI for Business", "Systems Thinking", "Strategic Foresight", "Workflow Design", "Innovation Mindset"],
+        zh: ["AI商业应用", "系统思维", "战略前瞻", "工作流设计", "创新思维"],
+      },
+    },
+  ],
+} as const;
+
+export const homeCasesContent = {
+  eyebrow: { en: "Capabilities in Action", zh: "让能力创造价值" },
+  title: { en: "Capabilities in Action", zh: "让能力创造价值" },
+  subtitle: {
+    en: "How I turned capabilities into value across customer growth, international markets, and complex stakeholder environments.",
+    zh: "我如何将不断建立的能力应用于真实商业问题，并转化为客户增长、市场机会与项目落地。",
+  },
+  labels: {
+    choose: { en: "Choose a case", zh: "选择案例" },
+    challenge: { en: "Business Problem", zh: "商业问题" },
+    evidence: { en: "Value Created", zh: "创造的价值" },
+    path: { en: "Value Creation Path", zh: "价值创造路径" },
+    view: { en: "View Case Study", zh: "查看案例详情" },
+  },
+  items: [
+    {
+      id: "kaoba167",
+      title: {
+        en: "Kaoba 167 — Building a Content-Led Education Business from Zero",
+        zh: "考吧167——从0建立内容驱动的线上教育业务",
+      },
+      image: "/images/cases/government-business.png",
+      challenge: {
+        en: "How can a new education business acquire customers and compete with established institutions without a strong brand or large advertising budget?",
+        zh: "在没有成熟品牌和大量广告预算的情况下，一个新的教育业务如何获取客户，并与成熟培训机构竞争？",
+      },
+      results: {
+        en: ["2,000+ private community users", "500+ paying customers", "70+ customer referrals", "Complete content-to-community-to-payment-to-referral growth system"],
+        zh: ["2,000+私域用户", "500+付费客户", "70+客户转介绍", "建立“内容—私域—付费转化—服务—转介绍”增长系统"],
+      },
+      path: {
+        en: ["Underserved Customer Needs", "Differentiated Services", "Organic Acquisition", "Paid Conversion", "Referral Growth"],
+        zh: ["未满足的客户需求", "差异化服务设计", "自然流量获客", "付费转化", "转介绍增长"],
+      },
+      statement: {
+        en: "Turned customer insight into a complete acquisition, conversion, service, and referral growth system.",
+        zh: "将客户洞察转化为获客、转化、服务交付与转介绍增长的完整业务系统。",
+      },
+    },
+    {
+      id: "uae-market-entry",
+      title: {
+        en: "UAE Cross-Border E-commerce — Entering an Unfamiliar International Market",
+        zh: "UAE跨境电商——进入陌生国际市场",
+      },
+      image: "/images/cases/uae-market-entry.png",
+      challenge: {
+        en: "How can a small team enter a fast-growing but unfamiliar international market while controlling inventory, logistics, and market risk?",
+        zh: "一个资源有限的小团队，如何在控制库存、物流和市场风险的情况下进入一个快速增长但陌生的国际市场？",
+      },
+      results: {
+        en: ["UAE market and competitor research", "Amazon UAE and Noon Best Seller analysis", "Multiple product categories tested", "1688 supplier development", "One best-performing SKU achieved 100+ monthly sales", "Supplier and logistics optimization"],
+        zh: ["完成UAE市场与竞争分析", "分析Amazon UAE和Noon Best Seller榜单", "测试多个轻量、低成本产品品类", "通过1688开发供应商", "表现最佳单品月销量超过100件", "逐步优化供应商与跨境物流体系"],
+      },
+      path: {
+        en: ["Market Signals", "Platform Research", "Product Screening", "Controlled Experimentation", "Cross-Border Operations"],
+        zh: ["市场信号", "平台研究", "产品筛选", "低风险实验", "跨境业务运营"],
+      },
+      statement: {
+        en: "Turned an unfamiliar international market into a structured market-entry and business validation process.",
+        zh: "将陌生国际市场转化为结构化的市场进入、产品验证与跨境运营过程。",
+      },
+    },
+    {
+      id: "government-business",
+      title: {
+        en: "Government Investment Promotion — Turning Stakeholder Complexity into Project Execution",
+        zh: "政府招商引资——将复杂利益相关者关系转化为项目执行",
+      },
+      image: "/images/cases/kaoba167.png",
+      challenge: {
+        en: "How can government resources, enterprise needs, and commercial opportunities be aligned to support investment decisions and project implementation?",
+        zh: "如何连接政府资源、企业需求和商业机会，降低企业投资决策的不确定性，并推动复杂项目实施？",
+      },
+      results: {
+        en: ["100+ enterprise and government-related relationships", "RMB 200M+ commercial projects supported", "Approximately RMB 10M cultural tourism activities supported", "Participation in coordination related to RMB 1.43B urban renewal initiative", "Enterprise participation support for the Canton Fair"],
+        zh: ["开发并维护100+企业及政府相关机构关系", "参与推动超2亿元商业项目", "支持约1000万元文旅商业活动", "参与约14.3亿元城市更新项目相关协调工作", "支持企业参加广交会并拓展国际业务机会"],
+      },
+      path: {
+        en: ["Regional Opportunity", "Enterprise Needs", "Stakeholder Alignment", "Resource Coordination", "Project Execution"],
+        zh: ["区域机会", "企业需求", "利益相关者协同", "资源协调", "项目推进"],
+      },
+      statement: {
+        en: "Turned complex stakeholder environments into coordinated action and continued project progress.",
+        zh: "将复杂的多方利益环境转化为资源协同、持续推进和实际项目进展。",
+      },
+    },
+  ],
+} as const;
+
+export const nextChangeContent = {
+  eyebrow: { en: "The Next Change", zh: "下一场变化" },
+  title: { en: "The Next Change", zh: "下一场变化" },
+  subtitle: {
+    en: "What changes now—and how I want to create value next.",
+    zh: "当市场、全球化与技术再次发生变化，我希望把过去建立的能力带入更复杂、更长期的商业挑战。",
+  },
+  parts: [
+    {
+      number: "01",
+      title: { en: "What Is Changing", zh: "世界正在发生什么变化" },
+      body: {
+        en: [
+          "The changes I experienced in the past were often connected to my own career path, individual businesses, and specific markets.",
+          "Today, I see deeper structural changes happening simultaneously.",
+          "Chinese companies are moving from relying primarily on supply-chain efficiency, cost advantages, and marketplace traffic toward competing in global markets.",
+          "Entering a market is no longer the most difficult challenge.",
+          "Understanding different customers, building localization capabilities, earning brand trust, developing long-term channels, and creating strong partner relationships are becoming increasingly important.",
+          "At the same time, AI is reducing the cost of information access, market research, content production, and business experimentation.",
+          "But as technological capabilities become more accessible, the capabilities that remain scarce are also changing.",
+          "Future competitive advantage will not come simply from having more tools.",
+          "It will come from understanding change faster, asking better questions, integrating market and technological information, and turning new possibilities into business systems that organizations can execute and improve over time.",
+        ],
+        zh: [
+          "过去，我经历的变化更多发生在个人职业路径和具体市场中。",
+          "现在，我关注到更深层的商业变化正在同时发生。",
+          "中国企业正在从依赖供应链效率、成本优势和平台流量，走向全球市场竞争。",
+          "进入一个市场已经不再是最困难的问题。",
+          "如何理解不同消费者、建立本地化能力、形成品牌信任、建设长期渠道和合作伙伴关系，正在成为更加重要的挑战。",
+          "与此同时，AI正在降低信息获取、市场研究、内容生产和业务实验的成本。",
+          "但技术能力越来越容易获得，也意味着真正稀缺的能力正在发生变化。",
+          "未来的竞争优势，不只是拥有更多工具，而是能否更快理解变化、提出正确的问题、整合市场与技术信息，并把新的可能性转化为组织可以持续执行的商业系统。",
+        ],
+      },
+    },
+    {
+      number: "02",
+      title: { en: "What I Have Built", zh: "过去的变化让我建立了什么" },
+      intro: {
+        en: [
+          "My experiences have not made me a specialist in only one function.",
+          "They have helped me build a combination of transferable capabilities that can create value across changing environments.",
+        ],
+        zh: [
+          "过去的经历并没有让我只成为某一个单一职能的专家。",
+          "它让我逐渐建立了一组能够跨环境迁移、并在变化中持续创造价值的能力组合。",
+        ],
+      },
+      modules: [
+        {
+          title: { en: "Opportunity Recognition", zh: "机会识别" },
+          description: {
+            en: "Identifying problems and opportunities worth exploring from changes in markets, customers, technology, and business environments.",
+            zh: "从市场、用户、技术和商业环境的变化中，识别值得进一步研究和验证的问题与机会。",
+          },
+        },
+        {
+          title: { en: "Customer & Market Understanding", zh: "客户与市场理解" },
+          description: {
+            en: "Understanding real demand through market research, direct customer interaction, platform information, and business feedback.",
+            zh: "通过市场研究、直接用户互动、平台信息和商业反馈理解真实需求。",
+          },
+        },
+        {
+          title: { en: "Zero-to-One Validation", zh: "从0到1验证" },
+          description: {
+            en: "Testing market demand, product opportunities, and business models through practical experimentation under limited resources and incomplete information.",
+            zh: "在资源有限和信息不完整的情况下，通过实际实验验证市场需求、产品机会和商业模式。",
+          },
+        },
+        {
+          title: { en: "Business Development & Stakeholder Alignment", zh: "商务拓展与利益相关者协同" },
+          description: {
+            en: "Understanding different objectives, constraints, and interests, then building cooperation and maintaining progress toward execution.",
+            zh: "理解不同参与者的目标、约束和利益，建立合作关系，并持续推动项目执行。",
+          },
+        },
+        {
+          title: { en: "Global Market Adaptability", zh: "全球市场适应能力" },
+          description: {
+            en: "Entering unfamiliar markets, identifying what can transfer across environments, and redesigning execution around local customers and market conditions.",
+            zh: "进入陌生市场，判断哪些能力可以迁移，并根据本地客户和市场条件重新设计执行方式。",
+          },
+        },
+        {
+          title: { en: "AI-Enabled Learning & Execution", zh: "AI赋能的学习与执行" },
+          description: {
+            en: "Using AI to improve research, analysis, workflow design, and experimentation while keeping business problems and value creation at the center.",
+            zh: "利用AI提升研究、分析、工作流设计和业务实验效率，同时始终以商业问题和价值创造为核心。",
+          },
+        },
+      ],
+    },
+    {
+      number: "03",
+      title: { en: "Where I Want to Create Value", zh: "下一阶段，我希望在哪里创造价值" },
+      body: {
+        en: [
+          "In my next stage, I want to work in more complex, international, and long-term-oriented business environments.",
+          "I want to contribute beyond individual transactions, short-term growth projects, or the validation of opportunities in a single market.",
+          "I want to help solve questions such as:",
+          "How can organizations identify new global market opportunities?",
+          "How can businesses understand customers across different markets?",
+          "How should market-entry strategies be designed, tested, and improved?",
+          "How can companies build long-term relationships across brands, channels, customers, and partners?",
+          "How can AI be meaningfully applied to market research, business decisions, and organizational workflows?",
+          "How can market and technological change be translated into competitive capabilities that organizations can continue to build over time?",
+          "Therefore, the intersection where I want to continue creating value is:",
+          "Global Growth × Business Development × GTM × Localization × AI-Enabled Business",
+        ],
+        zh: [
+          "下一阶段，我希望进入更加复杂、国际化和长期导向的商业环境。",
+          "我希望参与的不只是一次交易、一个短期增长项目，或者单一市场的机会验证。",
+          "我更希望参与解决这些问题：",
+          "如何识别新的全球市场机会？",
+          "如何理解不同市场中的消费者与客户？",
+          "如何设计并验证市场进入策略？",
+          "如何建立品牌、渠道、客户与合作伙伴之间的长期关系？",
+          "如何将AI真正应用于市场研究、业务决策和组织工作流？",
+          "如何把市场变化和技术变化转化为企业可以持续建立的竞争能力？",
+          "因此，我下一阶段希望在以下交叉区域持续创造价值：",
+          "全球增长 × 商务拓展 × 市场进入 × 本地化 × AI赋能商业",
+        ],
+      },
+    },
+  ],
+  conclusion: {
+    en: [
+      "The environments will change.",
+      "The problems will change.",
+      "The capabilities required will continue to change.",
+      "What I want to keep building is the ability to understand what is changing, learn what is needed, and turn new possibilities into long-term business value.",
+    ],
+    zh: [
+      "环境会变化。",
+      "问题会变化。",
+      "创造价值所需要的能力也会不断变化。",
+      "我希望持续建立的，是理解变化、学习所需能力，并将新的可能性转化为长期商业价值的能力。",
+    ],
+  },
+} as const;
+
+export const finalCtaContent = {
+  headline: {
+    en: "If your team is entering new markets, exploring new growth opportunities, or turning technological and business change into long-term value, I’d be glad to connect and explore what we could build together.",
+    zh: "如果你的团队正在进入新的市场、寻找新的增长机会，或探索如何将技术与商业变化转化为长期价值，我期待与你交流，看看我们能共同创造什么。",
+  },
+  button: {
+    en: "Let’s Connect →",
+    zh: "与我联系 →",
+  },
+  href: "mailto:jiyuewang9@163.com",
+} as const;
+
+export const homeNavContent = {
+  brand: "WANG JIYUE",
+  links: [
+    { label: { en: "Journey", zh: "经历" }, href: "/#journey" },
+    { label: { en: "Cases", zh: "案例" }, href: "/#cases" },
+    { label: { en: "The Next Change", zh: "下一场变化" }, href: "/#next-change" },
+    { label: { en: "Contact", zh: "联系" }, href: "/#contact" },
+  ],
+  resume: { en: "Resume", zh: "简历" },
+} as const;
+
+export const homeSections = [
+  { id: "hero", label: { en: "Hero", zh: "首页" }, href: "/#hero" },
+  { id: "journey", label: { en: "Journey", zh: "经历" }, href: "/#journey" },
+  { id: "cases", label: { en: "Cases", zh: "案例" }, href: "/#cases" },
+  { id: "next-change", label: { en: "Next Change", zh: "下一场变化" }, href: "/#next-change" },
+  { id: "contact", label: { en: "Contact", zh: "联系" }, href: "/#contact" },
+] as const;
+
+export const homeJourneyDetailsContent = [
+  {
+    why: {
+      en: ["I started in engineering, but a real sponsorship project showed me that my strongest energy came from understanding needs, communicating value, and connecting resources."],
+      zh: ["我最初学习工科，但一次真实赞助项目让我意识到，自己更擅长理解需求、沟通价值和连接资源。"],
+    },
+    observed: {
+      en: ["Real business practice gave me clearer evidence than a predefined path. I saw that value is created when needs, resources, and action can be connected."],
+      zh: ["真实商业实践比预设路径更能证明一个人的优势。我看到，价值来自于把需求、资源和行动真正连接起来。"],
+    },
+    decision: {
+      en: ["I transferred into Marketing, rebuilt my academic foundation, and later studied in France to broaden my business perspective."],
+      zh: ["我转入市场营销专业，重新建立商业知识基础，并前往法国学习，拓展自己的国际商业视野。"],
+    },
+    built: [
+      { title: { en: "Opportunity Recognition", zh: "机会识别" }, text: { en: "Learning to identify direction through real-world evidence.", zh: "通过真实实践识别方向和机会。" } },
+      { title: { en: "Business Communication", zh: "商务沟通" }, text: { en: "Learning to create cooperation through value exchange.", zh: "通过价值沟通和资源连接推动合作。" } },
+    ],
+  },
+  {
+    why: {
+      en: ["After studying business, I wanted to understand how ideas become outcomes inside complex organizations with multiple stakeholders."],
+      zh: ["学习商业之后，我希望理解想法如何在复杂组织和多方利益环境中真正变成结果。"],
+    },
+    observed: {
+      en: ["Good strategies do not create value automatically. Execution depends on aligning people, interests, resources, timing, and constraints."],
+      zh: ["好的策略不会自动创造价值。真正的执行取决于人、利益、资源、时机和约束条件的协同。"],
+    },
+    decision: {
+      en: ["I entered government-related work to learn stakeholder coordination, public-private communication, and complex project execution."],
+      zh: ["我进入政府相关工作，学习利益相关者协调、政企沟通和复杂项目推进。"],
+    },
+    built: [
+      { title: { en: "Stakeholder Management", zh: "利益相关者管理" }, text: { en: "Understanding different objectives and building alignment.", zh: "理解不同目标，并建立合作共识。" } },
+      { title: { en: "Complex Execution", zh: "复杂项目执行" }, text: { en: "Moving work forward when outcomes depend on multiple organizations.", zh: "在多组织参与的环境中持续推动项目进展。" } },
+    ],
+  },
+  {
+    why: {
+      en: ["I wanted to move from supporting projects to directly testing whether market insight could become customers, revenue, and repeatable growth."],
+      zh: ["我希望从支持项目，走向直接验证市场洞察能否转化为客户、收入和可重复增长。"],
+    },
+    observed: {
+      en: ["Small businesses cannot rely only on budgets or brand awareness. They need sharper customer understanding and more efficient growth systems."],
+      zh: ["小规模业务不能只依赖预算或品牌知名度，更需要精准客户理解和高效率增长系统。"],
+    },
+    decision: {
+      en: ["I built Kaoba 167 from zero and tested a content-to-community-to-payment-to-referral business system."],
+      zh: ["我从0建立考吧167，并验证“内容—私域—付费—服务—转介绍”的业务系统。"],
+    },
+    built: [
+      { title: { en: "Zero-to-One Validation", zh: "从0到1验证" }, text: { en: "Testing demand and business models under limited resources.", zh: "在有限资源下验证需求和商业模式。" } },
+      { title: { en: "Growth System Design", zh: "增长系统设计" }, text: { en: "Connecting acquisition, conversion, service, and referrals.", zh: "连接获客、转化、服务和转介绍。" } },
+    ],
+  },
+  {
+    why: {
+      en: ["After building in China, I wanted to test whether my market judgment and execution methods could transfer into unfamiliar international markets."],
+      zh: ["在中国市场实践之后，我希望验证自己的市场判断和执行方法能否迁移到陌生国际市场。"],
+    },
+    observed: {
+      en: ["Different markets require different customer assumptions, platform signals, supplier decisions, and operating constraints."],
+      zh: ["不同市场意味着不同客户假设、平台信号、供应链选择和运营约束。"],
+    },
+    decision: {
+      en: ["I explored the UAE e-commerce market through platform research, product screening, supplier development, and controlled experiments."],
+      zh: ["我通过平台研究、产品筛选、供应商开发和低风险实验探索UAE电商市场。"],
+    },
+    built: [
+      { title: { en: "Global Market Adaptability", zh: "全球市场适应能力" }, text: { en: "Entering unfamiliar markets and adapting execution to local conditions.", zh: "进入陌生市场，并根据本地条件调整执行方式。" } },
+      { title: { en: "Cross-Border Operations", zh: "跨境业务运营" }, text: { en: "Connecting product selection, sourcing, logistics, and feedback.", zh: "连接选品、采购、物流和市场反馈。" } },
+    ],
+  },
+  {
+    why: {
+      en: ["Global business practice made me pay closer attention to how AI and new workflows are changing research, execution, and organizational capability."],
+      zh: ["全球商业实践让我更加关注AI和新工作流如何改变研究、执行和组织能力。"],
+    },
+    observed: {
+      en: ["AI lowers the cost of information and experimentation, but the scarce capability is still asking better questions and turning possibilities into systems."],
+      zh: ["AI降低了信息获取和实验成本，但真正稀缺的仍是提出好问题，并把可能性转化为系统的能力。"],
+    },
+    decision: {
+      en: ["I began building AI-enabled workflows for research, analysis, business experimentation, and strategy execution."],
+      zh: ["我开始建立AI赋能的研究、分析、业务实验和战略执行工作流。"],
+    },
+    built: [
+      { title: { en: "AI-Enabled Learning", zh: "AI赋能学习" }, text: { en: "Using AI to accelerate research, analysis, and iteration.", zh: "利用AI提升研究、分析和迭代效率。" } },
+      { title: { en: "Systems Thinking", zh: "系统思维" }, text: { en: "Designing workflows that connect insight, action, and feedback.", zh: "设计连接洞察、行动和反馈的工作流。" } },
+    ],
+  },
+] as const;
