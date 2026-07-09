@@ -447,14 +447,14 @@ export const journeyContent = {
       },
     },
     {
-      title: { en: "From a Stable Career to Entrepreneurship", zh: "从稳定职业走向创业" },
+      title: { en: "From Government Projects to a Personal Business Loop", zh: "从政府项目到个人商业闭环" },
       shift: {
-        from: { en: "Stable Career", zh: "稳定职业" },
-        to: { en: "Entrepreneurship", zh: "创业" },
+        from: { en: "Government Projects", zh: "政府项目" },
+        to: { en: "Personal Online Education Studio", zh: "个人线上教育工作室" },
       },
       summary: {
-        en: "I left a structured environment to test whether I could create value without an existing platform or customer base.",
-        zh: "我离开确定性更强的职业环境，验证自己能否在没有成熟平台和现成客户的情况下创造价值。",
+        en: "I moved from government-business coordination and enterprise services to building a personal online civil service exam education studio from scratch. Through Xiaohongshu content acquisition, WeChat private-domain engagement, trial-session conversion, and long-term service delivery, I converted 500+ paid users and built a complete loop from acquisition to conversion, delivery, and referral growth.",
+        zh: "从政企协调和企业服务，转向从0搭建个人线上考公教育工作室。我通过小红书内容获客、微信私域承接和试听体验转化，完成500+付费用户转化，并建立获客、转化、交付和转介绍的完整业务闭环。",
       },
       capabilities: [
         { en: "Zero-to-One Business Building", zh: "从0到1业务构建" },
@@ -481,7 +481,7 @@ export const journeyContent = {
             "Traditional training institutions had strong brands and established distribution channels, but smaller operators could compete through useful content, direct customer relationships, and differentiated services.",
           ],
           zh: [
-            "就业环境正在变化，稳定职业机会竞争加剧，考公需求持续受到关注。同时，内容平台正在改变考生获取学习信息和选择教育服务的方式。",
+            "就业环境和考公需求正在变化，考生对高质量备考信息和灵活服务的需求持续增长。同时，内容平台正在改变考生获取学习信息和选择教育服务的方式。",
             "传统培训机构拥有品牌和渠道优势，但小型创业者也可以通过有价值的内容、直接客户关系和差异化服务获得机会。",
           ],
         },
@@ -1196,11 +1196,11 @@ export const homeHeroContent = {
   transitions: {
     en: [
       "Engineering → Business",
-      "Government → Entrepreneurship",
-      "China → Global Markets",
-      "Business Practice → AI-Enabled Workflows",
+      "Government → Personal Online Education Studio",
+      "China Market → Global Market",
+      "Business Practice → AI Empowerment",
     ],
-    zh: ["工科 → 商业", "政府 → 创业", "中国市场 → 全球市场", "商业实践 → AI赋能"],
+    zh: ["工科 → 商业", "政府 → 个人线上教育工作室", "中国市场 → 全球市场", "商业实践 → AI赋能"],
   },
 } as const;
 
@@ -1252,10 +1252,10 @@ export const homeJourneyContent = {
       },
     },
     {
-      title: { en: "From a Stable Career to Entrepreneurship", zh: "从稳定职业走向创业" },
+      title: { en: "From Government Projects to a Personal Business Loop", zh: "从政府项目到个人商业闭环" },
       summary: {
-        en: "I moved from structured work into direct market experimentation and built a business system from zero.",
-        zh: "我从稳定职业进入直接市场实验，并从0建立了一套业务系统。",
+        en: "I moved from government-business coordination and enterprise services to building a personal online civil service exam education studio from scratch. Through Xiaohongshu content acquisition, WeChat private-domain engagement, trial-session conversion, and long-term service delivery, I converted 500+ paid users and built a complete loop from acquisition to conversion, delivery, and referral growth.",
+        zh: "从政企协调和企业服务，转向从0搭建个人线上考公教育工作室。我通过小红书内容获客、微信私域承接和试听体验转化，完成500+付费用户转化，并建立获客、转化、交付和转介绍的完整业务闭环。",
       },
       tags: {
         en: ["Zero-to-One Validation", "Customer Insight", "Content-Led Growth", "Service Design", "Referral Growth"],
@@ -1529,6 +1529,19 @@ export const finalCtaContent = {
     zh: "与我联系 →",
   },
   href: "mailto:jiyuewang9@163.com",
+} as const;
+
+export const contactCtaContent = {
+  headline: {
+    en: "If you are entering a new market, exploring growth opportunities, or looking to turn technological and business changes into long-term value, I would be happy to connect and explore what we can create together.",
+    zh: "如果你正在进入新市场、寻找增长机会，或探索如何将技术与商业变化转化为长期价值，欢迎与我交流，一起看看可以创造哪些新的可能。",
+  },
+  button: {
+    en: "Contact Me →",
+    zh: "与我联系 →",
+  },
+  href: "mailto:jiyuewang9@163.com",
+  email: "jiyuewang9@163.com",
 } as const;
 
 export const homeNavContent = {

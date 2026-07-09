@@ -1,8 +1,8 @@
 import { motion, useReducedMotion } from "framer-motion";
-import { finalCtaContent, type Language } from "../data/content";
+import { contactCtaContent, type Language } from "../data/content";
 
 export default function WorkingPrinciples({ language }: { language: Language }) {
-  const data = finalCtaContent;
+  const data = contactCtaContent;
   const reduceMotion = useReducedMotion();
 
   return (
@@ -22,9 +22,16 @@ export default function WorkingPrinciples({ language }: { language: Language }) 
           </h2>
           <a
             href={data.href}
+            aria-label={`${data.button[language]} ${data.email}`}
             className="mt-10 inline-flex rounded-full bg-gradient-to-r from-fuchsia-300 via-indigo-300 to-cyan-200 px-8 py-4 text-base font-extrabold text-[#050512] shadow-[0_18px_70px_rgba(124,140,255,0.32)] transition hover:-translate-y-1 hover:scale-[1.02] md:text-lg"
           >
             {data.button[language]}
+          </a>
+          <a
+            href={data.href}
+            className="mx-auto mt-5 block w-fit text-sm font-semibold tracking-[0.04em] text-white/68 underline decoration-fuchsia-200/40 underline-offset-4 transition hover:-translate-y-0.5 hover:text-fuchsia-100 hover:decoration-fuchsia-100 md:text-base"
+          >
+            {data.email}
           </a>
         </div>
       </motion.div>
