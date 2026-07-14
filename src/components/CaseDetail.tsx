@@ -1,4 +1,5 @@
 import { Link, Navigate, useParams } from "react-router-dom";
+import type { ReactNode } from "react";
 import { caseDetails, caseProofs, type Language } from "../data/content";
 
 const labels = {
@@ -80,7 +81,7 @@ export default function CaseDetail({ language }: { language: Language }) {
                 </div>
                 <div className="mt-6 space-y-4 text-lg leading-8 text-white/68">
                   {section.body[language].map((paragraph) => (
-                    <p key={paragraph}>{paragraph}</p>
+                    <p key={paragraph}>{renderInlineLinks(paragraph)}</p>
                   ))}
                 </div>
               </section>
@@ -119,4 +120,29 @@ export default function CaseDetail({ language }: { language: Language }) {
       </article>
     </main>
   );
+}
+
+function renderInlineLinks(text: string) {
+  const linkPattern = /\[([^\]]+)\]\((https?:\/\/[^)]+)\)/g;
+  const parts: ReactNode[] = [];
+  let lastIndex = 0;
+  let match: RegExpExecArray | null;
+
+  while ((match = linkPattern.exec(text)) !== null) {
+    if (match.index > lastIndex) {
+      parts.push(text.slice(lastIndex, match.index));
+    }
+    parts.push(
+      <a key={`${match[1]}-${match.index}`} href={match[2]} target="_blank" rel="noopener noreferrer" className="underline decoration-fuchsia-200/45 underline-offset-4 transition hover:text-fuchsia-100">
+        {match[1]}
+      </a>,
+    );
+    lastIndex = match.index + match[0].length;
+  }
+
+  if (lastIndex < text.length) {
+    parts.push(text.slice(lastIndex));
+  }
+
+  return parts.length ? parts : text;
 }
