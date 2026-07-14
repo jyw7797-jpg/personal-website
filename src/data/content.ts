@@ -1171,64 +1171,55 @@ export const caseDetails = [
 export const homeHeroContent = {
   titleLines: {
     en: ["Building Transferable Capabilities", "Through Real Transitions"],
-    zh: ["从真实转变中", "建立可迁移能力"],
+    zh: ["从真实转变中，", "建立可迁移能力"],
   },
   accent: { en: "Transferable", zh: "可迁移" },
   subtitle: {
-    en: "I navigate change and uncertainty by understanding markets, forming clear judgments, connecting the right resources and driving execution—turning new possibilities into tangible, long-term business value.",
-    zh: "我在变化与不确定性中理解市场、形成判断、连接资源并推动执行，将新的可能性转化为真实、长期的商业价值。",
+    en: "From government–business collaboration and online education to Middle East e-commerce GTM, I have developed transferable capabilities in market research, customer insight, product strategy, stakeholder coordination and execution across different markets and business contexts.",
+    zh: "从政企合作、在线教育到中东跨境电商GTM，我形成了市场研究、用户洞察、产品策略、多方协调与项目落地能力，并能够将这些能力迁移到新的市场与商业场景中。",
   },
   advantage: {
-    en: "I navigate change and uncertainty by understanding markets, forming clear judgments, connecting the right resources and driving execution—turning new possibilities into tangible, long-term business value.",
-    zh: "我在变化与不确定性中理解市场、形成判断、连接资源并推动执行，将新的可能性转化为真实、长期的商业价值。",
+    en: "From government–business collaboration and online education to Middle East e-commerce GTM, I have developed transferable capabilities in market research, customer insight, product strategy, stakeholder coordination and execution across different markets and business contexts.",
+    zh: "从政企合作、在线教育到中东跨境电商GTM，我形成了市场研究、用户洞察、产品策略、多方协调与项目落地能力，并能够将这些能力迁移到新的市场与商业场景中。",
   },
   logic: {
-    en: "Understand Change → Form Judgment → Connect Resources → Drive Execution → Create Value",
-    zh: "理解变化 → 形成判断 → 连接资源 → 推动执行 → 创造价值",
+    en: "",
+    zh: "",
   },
   capabilityPath: {
-    en: ["Understand Change", "Form Judgment", "Connect Resources", "Drive Execution", "Create Value"],
-    zh: ["理解变化", "形成判断", "连接资源", "推动执行", "创造价值"],
+    en: [],
+    zh: [],
   },  positioning: {
-    en: "Strategy × Global Business × Technology",
-    zh: "战略 × 全球商业 × 技术",
+    en: "",
+    zh: "",
   },
   locations: {
     en: ["China", "France", "Finland", "Middle East"],
     zh: ["中国", "法国", "芬兰", "中东"],
   },
   locationLabel: {
-    en: "Global Experience",
-    zh: "全球经历",
+    en: "Cross-cultural learning and market practice",
+    zh: "跨文化学习与市场实践",
   },
   proofTitle: {
-    en: "Built Through Real Transitions",
-    zh: "能力来自真实转变",
+    en: "Market Research · Customer Insight · Product Strategy · Stakeholder Coordination · GTM Execution",
+    zh: "市场研究 · 用户洞察 · 产品策略 · 多方协调 · GTM执行",
   },
   transitions: {
-    en: [
-      "Engineering → Business",
-      "Government → Personal Online Education Studio",
-      "China Market → Global Market",
-      "Business Practice → AI Empowerment",
-    ],
-    zh: ["工科 → 商业", "政府 → 个人线上教育工作室", "中国市场 → 全球市场", "商业实践 → AI赋能"],
+    en: [],
+    zh: [],
   },
 } as const;
 
 export const homeJourneyContent = {
-  title: { en: "How Transitions Shaped My Capabilities", zh: "转变如何塑造了我的能力" },
+  title: { en: "How Transitions Shaped My Capabilities", zh: "转变如何塑造能力" },
   eyebrow: { en: "Capability Journey", zh: "能力形成路径" },
   intro: {
     en: [
-      "My career has not followed a predetermined path. Each transition began with a change I observed, a limitation in my existing capabilities, or a real question I wanted to answer.",
-      "Whenever I entered a new environment, I worked to understand its needs, learn the capabilities the challenge required, test possible solutions and transfer proven methods into a new market or business context.",
-      "What each transition left behind was not only a new experience, but a set of capabilities that could be reused, transferred and applied to create value again.",
+      "Building, testing and transferring capabilities through real challenges.",
     ],
     zh: [
-      "我的职业经历并没有沿着一条预先设定好的路线发展。每一次转变，都来自对市场变化的观察、对自身能力边界的认识，或对一个真实问题的持续追问。",
-      "进入新的环境后，我会重新理解需求、学习所需能力、验证解决方案，并将已有方法迁移到新的市场与商业场景中。",
-      "因此，每一次转变留下的不只是新的经历，更是一组能够持续复用、继续创造价值的能力。",
+      "在不同环境与真实问题中，持续学习、验证并迁移能力。",
     ],
   },  labels: {
     readMore: { en: "Read More", zh: "查看详情" },
@@ -1302,8 +1293,8 @@ export const homeCasesContent = {
   eyebrow: { en: "Turning Capabilities into Value", zh: "让能力创造价值" },
   title: { en: "Turning Capabilities into Value", zh: "让能力创造价值" },
   subtitle: {
-    en: "I apply the capabilities built through change to real business challenges—using market research, customer insight, product strategy, stakeholder coordination and execution to turn complexity into customer growth, market opportunities and tangible outcomes.",
-    zh: "我将不断建立的能力应用于真实商业问题，通过市场研究、用户洞察、产品设计、资源协调与执行落地，将复杂问题转化为客户增长、市场机会与项目成果。",
+    en: "Applying capabilities to real business challenges to create growth, opportunities and tangible outcomes.",
+    zh: "将能力应用于真实商业问题，转化为增长、机会与项目成果。",
   },
   labels: {
     choose: { en: "Choose a case", zh: "选择案例" },

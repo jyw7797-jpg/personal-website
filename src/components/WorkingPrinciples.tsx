@@ -6,7 +6,7 @@ export default function WorkingPrinciples({ language }: { language: Language }) 
   const reduceMotion = useReducedMotion();
 
   return (
-    <section id="contact" className="relative overflow-hidden bg-[#050512] px-5 py-28 text-white lg:px-8">
+    <section id="contact" className="relative overflow-hidden bg-[#050512] px-5 pb-28 pt-10 text-white md:pt-14 lg:px-8">
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_20%_22%,rgba(244,114,182,0.18),transparent_34%),radial-gradient(circle_at_80%_68%,rgba(124,140,255,0.22),transparent_36%),linear-gradient(180deg,#050512_0%,#09091a_48%,#050512_100%)]" />
       <motion.div
         className="relative z-10 mx-auto max-w-6xl rounded-[3rem] border border-white/12 bg-white/[0.07] px-6 py-16 shadow-[0_30px_120px_rgba(0,0,0,0.34)] backdrop-blur-2xl md:px-12 md:py-24"
